@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們 - 公司網站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">品牌名稱</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">公司介紹</a></li>
+                <li><a href="contact.html" class="active">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h1>聯絡我們</h1>
+            <p>請填寫下方表單，我們會儘快與您聯繫！</p>
+
+            <form action="https://formspree.io/f/mqpplglj" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" name="name" placeholder="請輸入姓名" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">電話</label>
+                    <input type="tel" id="phone" name="phone" placeholder="請輸入電話" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="_replyto" placeholder="請輸入電子郵件" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">聯絡內容</label>
+                    <textarea id="message" name="message" rows="5" placeholder="請輸入訊息內容..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">傳送訊息</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 品牌名稱. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
