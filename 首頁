@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>粉紅母嬰生活館｜品牌理念</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    background: #fff8fb;
+    color: #684653;
+}
+
+/* 導覽列 */
+.navbar {
+    height: 75px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 3px 15px rgba(220,130,160,0.12);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d85c91;
+    letter-spacing: 2px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #9c6479;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+.navbar a:hover {
+    color: #e66b9e;
+}
+
+/* 品牌主視覺 Banner */
+.hero {
+    position: relative;
+    min-height: 510px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    background:
+        radial-gradient(circle at 15% 20%, #fff4f8 0%, transparent 25%),
+        radial-gradient(circle at 85% 75%, #ffc8dc 0%, transparent 30%),
+        linear-gradient(135deg, #f9b6ce, #f6c8dc 45%, #fce5ed);
+}
+
+/* 背景裝飾圓形 */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    top: -130px;
+    left: -80px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    bottom: -130px;
+    right: -60px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+}
+
+.hero-label {
+    display: inline-block;
+    padding: 9px 25px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.65);
+    color: #c65a86;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 6vw, 58px);
+    color: #a83f6c;
+    letter-spacing: 5px;
+    margin-bottom: 18px;
+    text-shadow: 2px 3px 8px rgba(255,255,255,0.6);
+}
+
+.hero .english {
+    font-size: 15px;
+    color: #bd6489;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.hero .slogan {
+    font-size: 25px;
+    font-weight: bold;
+    color: #a94d73;
+    margin-bottom: 18px;
+}
+
+.hero .description {
+    max-width: 650px;
+    margin: auto;
+    line-height: 2;
+    color: #87566c;
+    font-size: 16px;
+}
+
+/* 裝飾愛心 */
+.heart {
+    position: absolute;
+    color: rgba(255,255,255,0.7);
+    font-size: 40px;
+}
+
+.heart-one {
+    top: 75px;
+    right: 16%;
+}
+
+.heart-two {
+    bottom: 65px;
+    left: 15%;
+    font-size: 30px;
+}
+
+.heart-three {
+    top: 45%;
+    left: 8%;
+    font-size: 25px;
+}
+
+/* 品牌理念 */
+.brand-section {
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.section-tag {
+    color: #db7a9f;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.brand-section h2 {
+    font-size: 34px;
+    color: #b64e78;
+    margin-bottom: 18px;
+}
+
+.section-intro {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    color: #967180;
+    line-height: 2;
+    font-size: 16px;
+}
+
+/* 理念卡片 */
+.idea-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.idea-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 38px 22px;
+    box-shadow: 0 8px 25px rgba(204,117,151,0.10);
+    border: 1px solid #fce1eb;
+    transition: 0.3s;
+}
+
+.idea-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 15px 30px rgba(204,117,151,0.18);
+}
+
+.idea-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffe0eb, #f8bfd4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+}
+
+.idea-card h3 {
+    color: #c15c83;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.idea-card p {
+    color: #967785;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+/* 品牌結語 */
+.brand-ending {
+    margin: 10px 8% 75px;
+    padding: 55px 20px;
+    border-radius: 25px;
+    text-align: center;
+    background: linear-gradient(120deg, #f8c0d5, #fde6ee);
+}
+
+.brand-ending h2 {
+    color: #a94770;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.brand-ending p {
+    color: #93647a;
+    font-size: 16px;
+    line-height: 2;
+}
+
+/* 頁尾 */
+footer {
+    background: #d9789f;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* 手機版 */
+@media (max-width: 850px) {
+    .idea-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar a {
+        margin-left: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 550px) {
+    .navbar {
+        height: auto;
+        padding: 18px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navbar a {
+        margin: 0 7px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero .slogan {
+        font-size: 21px;
+    }
+
+    .idea-container {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-section {
+        padding: 60px 7%;
+    }
+
+    .brand-section h2 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 導覽列 -->
+<header class="navbar">
+    <div class="logo">粉紅母嬰生活館</div>
+
+    <nav>
+        <a href="#home">品牌首頁</a>
+        <a href="#about">品牌理念</a>
+        <a href="formula.html">奶粉商品館</a>
+        <a href="diaper.html">尿布商品館</a>
+    </nav>
+</header>
+
+<!-- 品牌主視覺 Banner -->
+<section class="hero" id="home">
+
+    <div class="heart heart-one">♡</div>
+    <div class="heart heart-two">♡</div>
+    <div class="heart heart-three">✧</div>
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            LOVE · CARE · GROW
+        </div>
+
+        <h1>粉紅母嬰生活館</h1>
+
+        <div class="english">
+            PINK BABY LIFE
+        </div>
+
+        <div class="slogan">
+            陪伴寶寶幸福成長
+        </div>
+
+        <p class="description">
+            從寶寶出生的第一天開始，<br>
+            用心整理每一份育兒資訊，貼心陪伴每一個家庭。<br>
+            讓愛與關懷，成為寶寶成長路上最溫暖的力量。
+        </p>
+
+    </div>
+</section>
+
+<!-- 品牌理念 -->
+<section class="brand-section" id="about">
+
+    <div class="section-tag">OUR BRAND PHILOSOPHY</div>
+
+    <h2>我們的品牌理念</h2>
+
+    <p class="section-intro">
+        每個寶寶都是家庭最珍貴的寶貝。
+        我們以媽媽與寶寶的需求為出發點，
+        整合奶粉與嬰幼兒尿布商品資訊，
+        希望讓爸媽能更輕鬆地找到需要的育兒資訊，
+        陪伴寶寶健康、快樂地成長。
+    </p>
+
+    <div class="idea-container">
+
+        <div class="idea-card">
+            <div class="idea-icon">♡</div>
+            <h3>用心整理</h3>
+            <p>
+                用心蒐集與整理母嬰商品資訊，
+                讓爸媽能更方便地了解商品內容，
+                減少尋找資料的時間。
+            </p>
+        </div>
+
+        <div class="idea-card">
+            <div class="idea-icon">✿</div>
+            <h3>貼心分類</h3>
+            <p>
+                依照品牌、適用年齡與商品規格分類，
+                讓不同成長階段的寶寶，
+                都能快速找到合適的商品資訊。
+            </p>
+        </div>
+
+        <div class="idea-card">
+            <div class="idea-icon">☀</div>
+            <h3>重視需求</h3>
+            <p>
+                從爸媽實際育兒需求出發，
+                提供清楚的商品介紹與參考價格，
+                讓選購資訊更加簡單明瞭。
+            </p>
+        </div>
+
+        <div class="idea-card">
+            <div class="idea-icon">♧</div>
+            <h3>陪伴成長</h3>
+            <p>
+                從新生兒到幼兒階段，
+                希望陪伴每個家庭走過寶寶成長的
+                每一個重要時刻。
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- 品牌結語 -->
+<section class="brand-ending">
+    <h2>因為愛，所以用心；因為在乎，所以更貼心。</h2>
+    <p>
+        粉紅母嬰生活館<br>
+        用溫暖的心，陪伴寶寶幸福成長。
+    </p>
+</section>
+
+<!-- 頁尾 -->
+<footer>
+    <p>粉紅母嬰生活館 PINK BABY LIFE</p>
+    <p>用心呵護每一天，陪伴寶寶每一步。</p>
+    <p>© 2026 Pink Baby Life. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+```
